@@ -5,7 +5,7 @@ import { Button, Eyebrow, Section } from "@/components/ui";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Live STRONG Studio",
+  title: "Valora Live",
 };
 
 export default function LivePage() {
@@ -13,8 +13,8 @@ export default function LivePage() {
     <>
       <section className="relative min-h-[75vh] overflow-hidden bg-ink text-cream">
         <Image
-          src="/images/hollie-mint.jpg"
-          alt="Hollie leading a STRONG workout"
+          src="/images/live.jpg"
+          alt="A Valora live strength class"
           fill
           priority
           className="object-cover object-[center_15%] opacity-60"
@@ -24,7 +24,7 @@ export default function LivePage() {
           <div className="max-w-2xl">
             <Eyebrow>Virtual studio</Eyebrow>
             <h1 className="mt-4 font-serif text-5xl sm:text-6xl">
-              Train live with Hollie.
+              Train live with Valora.
             </h1>
             <p className="mt-5 text-sm leading-relaxed text-cream/80">
               {site.live.days} at {site.live.time}. Dumbbells and bands. Your
@@ -43,9 +43,9 @@ export default function LivePage() {
             </h2>
             <ul className="mt-8 space-y-4 text-sm">
               {[
-                `Monday · Full body · ${site.live.time}`,
                 `Tuesday · Full body · ${site.live.time}`,
-                `Friday · Full body · ${site.live.time}`,
+                `Thursday · Strength + conditioning · ${site.live.time}`,
+                `Saturday · Full body · ${site.live.time}`,
                 "Can't make it live? The recording is yours.",
               ].map((item) => (
                 <li key={item} className="border-b border-ink/10 pb-4">
@@ -54,27 +54,27 @@ export default function LivePage() {
               ))}
             </ul>
             <p className="mt-8 text-sm text-muted">
-              Want the full membership — live classes, daily workouts, yoga, and
-              coaching? That lives inside STRONG VIP.
+              Want the full membership — live classes, daily workouts, mobility,
+              and coaching? That lives inside Valora Studio.
             </p>
             <div className="mt-6">
-              <Button href="/programs/vip" variant="ghost">
-                See VIP
+              <Button href="/programs/studio" variant="ghost">
+                See Studio
               </Button>
             </div>
           </div>
           <div className="border border-ink bg-paper p-8">
             <Eyebrow>Claim your free class</Eyebrow>
-            <h3 className="mt-4 font-serif text-3xl">I&apos;ll save you a spot.</h3>
+            <h3 className="mt-4 font-serif text-3xl">We&apos;ll save you a spot.</h3>
             <p className="mt-3 mb-8 text-sm text-muted">
-              Send your name and email. Hollie will reply with the Zoom link and
+              Send your name and email. We will reply with the Zoom link and
               what to have ready.
             </p>
             <LeadForm
               kind="live-class"
-              interest="Live STRONG class"
+              interest="Live studio class"
               cta="Book my free class"
-              success="Hollie will reply with the Zoom link, what to have ready, and your class time."
+              success="We will reply with the Zoom link, what to have ready, and your class time."
             />
           </div>
         </div>

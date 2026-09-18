@@ -70,8 +70,8 @@ export function ContactForm({ defaultInterest }: { defaultInterest?: string }) {
   if (status === "ok") {
     return (
       <Success>
-        Hollie will be in touch within 48 hours. If you need her sooner, call or
-        email anytime.
+        The Valora team will be in touch within 48 hours. If you need us sooner,
+        call or email anytime.
       </Success>
     );
   }
@@ -109,13 +109,14 @@ export function ContactForm({ defaultInterest }: { defaultInterest?: string }) {
           Choose one
         </option>
         {[
-          "14-Day LeanBody Project",
-          "Lift to Lean",
-          "STRONG VIP",
-          "1:1 Transform coaching",
-          "Live STRONG class",
-          "Free Full-Body Blueprint",
-          "STRONG apparel",
+          "21-Day Ignite",
+          "Lift Lab",
+          "Valora Studio",
+          "Private coaching",
+          "Live studio class",
+          "Free Starter Series",
+          "Studio gear",
+          "Studio apparel",
           "Something else",
         ].map((opt) => (
           <option key={opt} value={opt}>
@@ -127,14 +128,13 @@ export function ContactForm({ defaultInterest }: { defaultInterest?: string }) {
       <button
         type="submit"
         disabled={status === "sending"}
-        className="border border-ink bg-ink px-6 py-3 text-[11px] tracking-[0.22em] uppercase text-cream hover:bg-blush hover:border-blush disabled:opacity-60"
+        className="border border-ink bg-ink px-6 py-3 text-[11px] tracking-[0.22em] uppercase text-cream hover:bg-moss hover:border-moss disabled:opacity-60"
       >
         {status === "sending" ? "Sending…" : "Send message"}
       </button>
       {status === "error" ? (
-        <p className="text-sm text-blush">
-          Something went wrong. Email Hollie directly and she will take it from
-          there.
+        <p className="text-sm text-copper">
+          Something went wrong. Email us directly and we will take it from there.
         </p>
       ) : null}
     </form>
@@ -158,7 +158,7 @@ export function LeadForm({
     return (
       <Success>
         {success ??
-          "Hollie will follow up shortly with next steps. If you need her sooner, email or call anytime."}
+          "We will follow up shortly with next steps. If you need us sooner, email or call anytime."}
       </Success>
     );
   }
@@ -187,13 +187,13 @@ export function LeadForm({
       <button
         type="submit"
         disabled={status === "sending"}
-        className="border border-ink bg-ink px-6 py-3 text-[11px] tracking-[0.22em] uppercase text-cream hover:bg-blush hover:border-blush disabled:opacity-60"
+        className="border border-ink bg-ink px-6 py-3 text-[11px] tracking-[0.22em] uppercase text-cream hover:bg-moss hover:border-moss disabled:opacity-60"
       >
         {status === "sending" ? "Sending…" : cta}
       </button>
       {status === "error" ? (
-        <p className="text-sm text-blush">
-          Something went wrong. Try again or email Hollie directly.
+        <p className="text-sm text-copper">
+          Something went wrong. Try again or email us directly.
         </p>
       ) : null}
     </form>

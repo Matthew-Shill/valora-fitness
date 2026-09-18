@@ -3,28 +3,28 @@ import Image from "next/image";
 import { Faq } from "@/components/Faq";
 import { LeadForm } from "@/components/Forms";
 import { Button, Eyebrow, Section } from "@/components/ui";
-import { faqs, testimonials } from "@/lib/site";
+import { faqs, site, testimonials } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "STRONG VIP",
+  title: "Valora Studio",
 };
 
 const includes = [
   { name: "Five tailored workouts per week", value: "Progressive strength plus metabolic work" },
-  { name: "Live Zoom classes", value: "Monday, Tuesday, Friday · 5:45 AM ET" },
-  { name: "Weekly STRONG yoga", value: "Mobility, recovery, and joints that last" },
+  { name: "Live Zoom classes", value: `${site.live.days} · ${site.live.time}` },
+  { name: "Weekly mobility", value: "Recovery, joints, and range that lasts" },
   { name: "App access", value: "The day's workout, community, and coaching" },
-  { name: "Cardio + core library", value: "On-demand whenever you need it" },
-  { name: "VIP gifts", value: "Milestones, celebrated" },
+  { name: "Conditioning library", value: "On-demand whenever you need it" },
+  { name: "Studio milestones", value: "Progress, celebrated" },
 ];
 
-export default function VipPage() {
+export default function StudioPage() {
   return (
     <>
       <section className="relative min-h-[80vh] overflow-hidden bg-ink text-cream">
         <Image
-          src="/images/hollie-rack.jpg"
-          alt="Hollie training in the STRONG studio"
+          src="/images/studio.jpg"
+          alt="Strength training in the Valora studio"
           fill
           priority
           className="object-cover object-[center_12%] opacity-55"
@@ -33,17 +33,17 @@ export default function VipPage() {
         <div className="relative mx-auto flex min-h-[80vh] max-w-6xl items-end px-5 py-20 sm:px-8 lg:px-12">
           <div className="max-w-2xl">
             <Eyebrow>Membership</Eyebrow>
-            <h1 className="mt-4 font-serif text-5xl sm:text-7xl">STRONG VIP</h1>
+            <h1 className="mt-4 font-serif text-5xl sm:text-7xl">Valora Studio</h1>
             <p className="mt-5 max-w-lg text-sm leading-relaxed text-cream/80">
               Your all-in strength practice. Daily workouts, live coaching, and a
-              plan for women who are done starting over.
+              plan for people who are done starting over.
             </p>
             <p className="mt-6 text-[11px] tracking-[0.22em] uppercase">
-              $79 / month · $209 / quarter · $749 / year
+              $89 / month · $239 / quarter · $849 / year
             </p>
             <div className="mt-8">
               <Button href="#join" variant="light">
-                Join VIP
+                Join Studio
               </Button>
             </div>
           </div>
@@ -52,14 +52,14 @@ export default function VipPage() {
 
       <Section className="py-20">
         <div className="max-w-2xl">
-          <Eyebrow>Muscle is your 401(k)</Eyebrow>
+          <Eyebrow>Muscle is your long game</Eyebrow>
           <h2 className="mt-4 font-serif text-4xl sm:text-5xl">
             After 35, you are either building it — or losing it.
           </h2>
           <p className="mt-5 text-muted leading-relaxed">
-            Muscle is metabolism, strength, and longevity. STRONG VIP is the
-            daily deposit: Triple S training, the 40-20 nutrition method, and a
-            coach who will not let you ghost yourself.
+            Muscle is metabolism, strength, and longevity. Studio is the daily
+            deposit: the {site.method} Method, live coaching, and a plan that
+            will not let you ghost yourself.
           </p>
         </div>
         <div className="mt-14 grid gap-px bg-ink/10 sm:grid-cols-2">
@@ -71,7 +71,7 @@ export default function VipPage() {
           ))}
         </div>
         <p className="mt-8 text-sm text-muted">
-          Optional add-on: Fat Loss Coaching Pod · $99
+          Optional add-on: Fat Loss Pod · $99
         </p>
       </Section>
 
@@ -79,8 +79,8 @@ export default function VipPage() {
         <div className="mx-auto grid max-w-6xl items-center lg:grid-cols-2">
           <div className="relative min-h-[480px]">
             <Image
-              src="/images/hollie-vip.jpg"
-              alt="Hollie"
+              src="/images/live.jpg"
+              alt="A Valora live class"
               fill
               className="object-cover object-[center_12%]"
             />
@@ -118,19 +118,19 @@ export default function VipPage() {
             <Eyebrow>Enroll</Eyebrow>
             <h2 className="mt-4 font-serif text-4xl">Workouts start immediately.</h2>
             <p className="mt-4 text-sm leading-relaxed text-muted">
-              Share your email and Hollie will send checkout. Choose monthly,
+              Share your email and we will send checkout. Choose monthly,
               quarterly, or annual once you are in.
             </p>
           </div>
           <LeadForm
-            kind="vip"
-            interest="STRONG VIP"
+            kind="studio"
+            interest="Valora Studio"
             cta="Start enrollment"
-            success="Hollie will send checkout. Choose monthly, quarterly, or annual once you are in — workouts start immediately."
+            success="We will send checkout. Choose monthly, quarterly, or annual once you are in — workouts start immediately."
           />
         </div>
         <div className="mt-16">
-          <Faq items={[...faqs.general, ...faqs.vip]} />
+          <Faq items={[...faqs.general, ...faqs.studio]} />
         </div>
       </Section>
     </>

@@ -40,10 +40,10 @@ export function Header() {
             );
           })}
           <Link
-            href="/programs/lean-body"
+            href="/programs/ignite"
             className="border border-cream px-4 py-2 text-[11px] tracking-[0.22em] uppercase hover:bg-cream hover:text-ink"
           >
-            Join LeanBody
+            Start Ignite
           </Link>
         </nav>
 
@@ -72,11 +72,11 @@ export function Header() {
               </Link>
             ))}
             <Link
-              href="/programs/lean-body"
+              href="/programs/ignite"
               onClick={() => setOpen(false)}
               className="mt-2 border border-cream px-4 py-3 text-center text-[11px] tracking-[0.22em] uppercase"
             >
-              Join LeanBody · $19
+              Start Ignite · $29
             </Link>
           </nav>
         </div>

@@ -52,7 +52,7 @@ export async function POST(request: Request) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "Hollie Nicholson Wellness <noreply@hollienicholsonwellness.com>",
+        from: "Valora Fitness <noreply@valora.fit>",
         to: [site.email],
         subject: `New ${body.kind ?? "inquiry"}: ${body.firstName} — ${body.interest ?? ""}`,
         text: JSON.stringify(entry, null, 2),

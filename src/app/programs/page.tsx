@@ -17,8 +17,8 @@ export default function ProgramsPage() {
           Pick the level of support you need right now.
         </h1>
         <p className="mt-5 max-w-xl text-muted leading-relaxed">
-          Same method. Different containers. Start with two weeks, commit to
-          six, join the membership, or go 1:1.
+          Same method. Different containers. Start with three weeks, commit to
+          eight, join the membership, or go 1:1.
         </p>
       </Section>
 

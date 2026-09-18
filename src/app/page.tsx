@@ -7,17 +7,17 @@ export default function HomePage() {
   return (
     <>
       <Link
-        href="/programs/lean-body"
-        className="flex items-center justify-center gap-3 bg-blush px-5 py-2.5 text-center text-[11px] tracking-[0.22em] uppercase text-cream"
+        href="/programs/ignite"
+        className="flex items-center justify-center gap-3 bg-moss px-5 py-2.5 text-center text-[11px] tracking-[0.22em] uppercase text-cream"
       >
-        <span>14-Day LeanBody Project · Starts August 31 · $19</span>
+        <span>21-Day Ignite · Starts any Monday · $29</span>
         <span className="hidden sm:inline">Join now →</span>
       </Link>
 
       <section className="relative min-h-[88vh] overflow-hidden bg-ink text-cream">
         <Image
-          src="/images/hero-squat.jpg"
-          alt="Hollie coaching a goblet squat in her home studio"
+          src="/images/hero.jpg"
+          alt="A Valora coach cueing a goblet squat in a home studio"
           fill
           priority
           className="object-cover object-[70%_center] opacity-80"
@@ -25,21 +25,21 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/75 to-ink/10" />
         <div className="relative mx-auto flex min-h-[88vh] max-w-6xl flex-col justify-end px-5 py-16 sm:px-8 lg:justify-center lg:px-12">
           <div className="max-w-xl">
-            <Eyebrow>Online strength for busy women</Eyebrow>
+            <Eyebrow>Online strength for busy lives</Eyebrow>
             <h1 className="mt-5 font-serif text-5xl leading-[0.95] sm:text-6xl lg:text-7xl">
-              Lift weights.
+              Lift heavy.
               <br />
-              Burn fat.
+              Eat simply.
               <br />
-              Get STRONG.
+              Live stronger.
             </h1>
             <p className="mt-6 max-w-md text-sm leading-relaxed text-cream/75 sm:text-base">
               {site.tagline} Follow-along workouts, simple nutrition, and a
-              trainer who gets what your life actually looks like.
+              coach who gets what your week actually looks like.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button href="/programs/lean-body" variant="light">
-                Start the 14-day project
+              <Button href="/programs/ignite" variant="light">
+                Start the 21-day reset
               </Button>
               <Button href="/start" variant="ghost">
                 Get free workouts
@@ -52,7 +52,7 @@ export default function HomePage() {
       <Section className="py-20 lg:py-28">
         <div className="grid gap-10 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-5">
-            <Eyebrow>The STRONG Method</Eyebrow>
+            <Eyebrow>The {site.method} Method</Eyebrow>
             <h2 className="mt-4 font-serif text-4xl sm:text-5xl">
               A plan you can live in.
             </h2>
@@ -91,8 +91,8 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-6xl lg:grid-cols-2">
           <div className="relative min-h-[420px]">
             <Image
-              src="/images/hollie-goblet.jpg"
-              alt="Hollie holding a dumbbell in her studio"
+              src="/images/goblet.jpg"
+              alt="A coach holding a dumbbell in the Valora studio"
               fill
               className="object-cover"
             />
@@ -100,20 +100,19 @@ export default function HomePage() {
           <div className="flex flex-col justify-center px-5 py-16 sm:px-10 lg:px-14">
             <Eyebrow>Current project</Eyebrow>
             <h2 className="mt-4 font-serif text-4xl sm:text-5xl">
-              14 days. One plan. $19.
+              21 days. One plan. $29.
             </h2>
             <p className="mt-5 max-w-md text-sm leading-relaxed text-cream/70">
-              The kids are back in school. Now it is your turn. Four follow-along
-              workouts a week, a LeanBody Eats guide, and Hollie coaching you
-              through every session.
+              Four follow-along workouts a week, a simple eats guide, and a
+              coach walking you through every session. Start any Monday.
             </p>
             <ul className="mt-8 space-y-2 text-sm text-cream/80">
-              <li>Upper · Lower · Full body · Cardio + core</li>
+              <li>Upper · Lower · Full body · Conditioning</li>
               <li>30 minutes or less, dumbbells only</li>
-              <li>Starts August 31</li>
+              <li>Starts the next Monday after you join</li>
             </ul>
             <div className="mt-8">
-              <Button href="/programs/lean-body" variant="light">
+              <Button href="/programs/ignite" variant="light">
                 I am in
               </Button>
             </div>
@@ -169,29 +168,29 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-6xl items-center gap-0 lg:grid-cols-2">
           <div className="px-5 py-16 sm:px-10 lg:px-12">
             <FramedMark
-              title="Hollie Nicholson"
-              caption="Trainer · Nutrition coach · Mom of three"
+              title={site.founder}
+              caption="Trainer · Nutrition coach · Founder"
               className="mb-10 max-w-md bg-paper"
             />
             <h2 className="font-serif text-4xl sm:text-5xl">
-              17 years of coaching. Zero interest in fluff.
+              12 years of coaching. Zero interest in fluff.
             </h2>
             <p className="mt-5 max-w-md text-sm leading-relaxed text-muted">
-              Hollie is a certified trainer and nutrition coach — and a Midwest
-              mom of three who feels most alive in the mountains and always has
-              an afternoon Diet Coke in hand. She built STRONG for women who are
-              done spinning their wheels.
+              {site.founder} is a certified trainer and nutrition coach who
+              built {site.name} for people who are done spinning their wheels.
+              Strength first. Food that fits real life. Support that does not
+              disappear after week two.
             </p>
             <div className="mt-8">
               <Button href="/about" variant="ghost">
-                Meet Hollie
+                Meet {site.founder.split(" ")[0]}
               </Button>
             </div>
           </div>
           <div className="relative min-h-[520px]">
             <Image
-              src="/images/hollie-portrait.jpg"
-              alt="Hollie Nicholson in her kitchen"
+              src="/images/founder.jpg"
+              alt={`${site.founder}, founder of ${site.name}`}
               fill
               className="object-cover object-top"
             />
@@ -200,7 +199,7 @@ export default function HomePage() {
       </section>
 
       <Section className="py-20 lg:py-28">
-        <Eyebrow>Results from real women</Eyebrow>
+        <Eyebrow>Results from real people</Eyebrow>
         <h2 className="mt-4 max-w-xl font-serif text-4xl sm:text-5xl">
           Busy lives. Stronger bodies.
         </h2>
@@ -218,15 +217,15 @@ export default function HomePage() {
 
       <section className="relative overflow-hidden bg-ink text-cream">
         <Image
-          src="/images/hollie-rack.jpg"
-          alt="Hollie training with a resistance band"
+          src="/images/studio.jpg"
+          alt="Strength training in the Valora studio"
           fill
           className="object-cover object-[center_28%] opacity-35"
         />
         <div className="relative mx-auto max-w-6xl px-5 py-24 sm:px-8 lg:px-12">
-          <Eyebrow>STRONG Studio</Eyebrow>
+          <Eyebrow>Valora Live</Eyebrow>
           <h2 className="mt-4 max-w-lg font-serif text-4xl sm:text-6xl">
-            Live with Hollie, {site.live.days}.
+            Train live, {site.live.days}.
           </h2>
           <p className="mt-5 max-w-md text-sm leading-relaxed text-cream/75">
             {site.live.time} on Zoom. Miss it? The recording is yours. Your first

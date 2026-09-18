@@ -8,13 +8,15 @@ export const metadata: Metadata = {
 };
 
 const interestMap: Record<string, string> = {
-  "lean-body": "14-Day LeanBody Project",
-  "lift-to-lean": "Lift to Lean",
-  vip: "STRONG VIP",
-  transform: "1:1 Transform coaching",
-  live: "Live STRONG class",
-  blueprint: "Free Full-Body Blueprint",
-  apparel: "STRONG apparel",
+  ignite: "21-Day Ignite",
+  "lift-lab": "Lift Lab",
+  studio: "Valora Studio",
+  coaching: "Private coaching",
+  live: "Live studio class",
+  starter: "Free Starter Series",
+  apparel: "Studio apparel",
+  gear: "Studio gear",
+  fuel: "Studio protein",
 };
 
 export default async function ContactPage({
@@ -34,28 +36,28 @@ export default async function ContactPage({
           <Eyebrow>Contact</Eyebrow>
           <h1 className="mt-4 font-serif text-5xl">Let&apos;s find your next step.</h1>
           <p className="mt-5 text-sm leading-relaxed text-muted">
-            Questions about STRONG, which program is right, or how to get
-            started? Hollie replies within 48 hours.
+            Questions about Valora, which program is right, or how to get
+            started? We reply within 48 hours.
           </p>
           <ul className="mt-10 space-y-3 text-sm">
             <li>
-              <a href={site.phoneHref} className="hover:text-blush">
+              <a href={site.phoneHref} className="hover:text-moss">
                 {site.phone}
               </a>
             </li>
             <li>
-              <a href={site.emailHref} className="hover:text-blush">
+              <a href={site.emailHref} className="hover:text-moss">
                 {site.email}
               </a>
             </li>
             <li>
               <a
-                href={site.facebook}
+                href={site.instagram}
                 target="_blank"
                 rel="noreferrer"
-                className="hover:text-blush"
+                className="hover:text-moss"
               >
-                Facebook
+                Instagram
               </a>
             </li>
           </ul>

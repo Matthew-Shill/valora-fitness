@@ -16,7 +16,7 @@ export function Button({
 }: ButtonProps) {
   const styles = {
     solid:
-      "bg-ink text-cream hover:bg-blush border-ink hover:border-blush",
+      "bg-ink text-cream hover:bg-moss border-ink hover:border-moss",
     ghost:
       "bg-transparent text-current border-current hover:bg-ink hover:text-cream hover:border-ink",
     light:

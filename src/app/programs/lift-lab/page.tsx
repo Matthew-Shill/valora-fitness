@@ -6,16 +6,16 @@ import { Button, Eyebrow, Section } from "@/components/ui";
 import { faqs, testimonials } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Lift to Lean",
+  title: "Lift Lab",
 };
 
-export default function LiftToLeanPage() {
+export default function LiftLabPage() {
   return (
     <>
       <section className="relative min-h-[78vh] overflow-hidden bg-ink text-cream">
         <Image
-          src="/images/hero-dumbbells.jpg"
-          alt="Hollie with dumbbells"
+          src="/images/dumbbells.jpg"
+          alt="Home gym dumbbells used in Lift Lab"
           fill
           priority
           className="object-cover object-right opacity-75"
@@ -23,16 +23,16 @@ export default function LiftToLeanPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/70 to-transparent" />
         <div className="relative mx-auto flex min-h-[78vh] max-w-6xl items-center px-5 py-20 sm:px-8 lg:px-12">
           <div className="max-w-xl">
-            <Eyebrow>Next session · September 14</Eyebrow>
-            <h1 className="mt-4 font-serif text-5xl sm:text-7xl">Lift to Lean</h1>
+            <Eyebrow>Next session · 8 weeks</Eyebrow>
+            <h1 className="mt-4 font-serif text-5xl sm:text-7xl">Lift Lab</h1>
             <p className="mt-5 text-sm leading-relaxed text-cream/75">
-              Six weeks to build strength, lose fat, and finally see your body
+              Eight weeks to build strength, lose fat, and finally see your body
               change — without dieting or hours of cardio.
             </p>
-            <p className="mt-4 font-serif text-3xl">$99</p>
+            <p className="mt-4 font-serif text-3xl">$129</p>
             <div className="mt-8">
               <Button href="#join" variant="light">
-                Start Lift to Lean
+                Start Lift Lab
               </Button>
             </div>
           </div>
@@ -43,16 +43,16 @@ export default function LiftToLeanPage() {
         <div className="grid gap-12 lg:grid-cols-3">
           {[
             {
-              phase: "Weeks 1–3 · Lift",
+              phase: "Weeks 1–4 · Lift",
               copy: "Progressive strength training to shape your body and change how your clothes fit. We are not just burning calories. We are giving your body a reason to change.",
             },
             {
-              phase: "Weeks 4–6 · Lean",
+              phase: "Weeks 5–8 · Lean",
               copy: "Turn up the intensity. Keep the foundation, add pace and conditioning, reveal definition.",
             },
             {
               phase: "Nutrition + coaching",
-              copy: "Daily Four eating — enough protein, meals you can live with, no tracking extremes. Plus Hollie in the app so you are never guessing.",
+              copy: "Simple fuel — enough protein, meals you can live with, no tracking extremes. Plus a coach in the app so you are never guessing.",
             },
           ].map((item) => (
             <div key={item.phase} className="border-t border-ink/15 pt-6">
@@ -68,11 +68,11 @@ export default function LiftToLeanPage() {
       <section className="bg-ink text-cream">
         <div className="mx-auto grid max-w-6xl lg:grid-cols-2">
           <div className="px-5 py-16 sm:px-10">
-            <Eyebrow>Inside the six weeks</Eyebrow>
+            <Eyebrow>Inside the eight weeks</Eyebrow>
             <ul className="mt-8 space-y-4 text-sm">
               {[
                 "4 follow-along workouts each week, 40 minutes or less",
-                "Daily Four nutrition framework",
+                "A simple protein-first eating framework",
                 "Coaching and accountability in the app",
                 "Progress tracking for workouts and weights",
                 "Bonus: start-now workouts the moment you join",
@@ -85,8 +85,8 @@ export default function LiftToLeanPage() {
           </div>
           <div className="relative min-h-[420px]">
             <Image
-              src="/images/hollie-band.jpg"
-              alt="Hollie training with a resistance band"
+              src="/images/bands.jpg"
+              alt="Resistance band training from Lift Lab"
               fill
               className="object-cover object-[center_5%]"
             />
@@ -111,17 +111,17 @@ export default function LiftToLeanPage() {
         <div className="grid gap-12 border border-ink bg-paper p-8 sm:p-12 lg:grid-cols-2">
           <div>
             <Eyebrow>Limited-time pricing</Eyebrow>
-            <h2 className="mt-4 font-serif text-4xl">Start Lift to Lean · $99</h2>
+            <h2 className="mt-4 font-serif text-4xl">Start Lift Lab · $129</h2>
             <p className="mt-4 text-sm leading-relaxed text-muted">
-              Session begins Monday, September 14. Join now and get immediate
-              access to start-now workouts while you wait.
+              Join now and get immediate access to start-now workouts while you
+              wait for the next session.
             </p>
           </div>
           <LeadForm
-            kind="lift-to-lean"
-            interest="Lift to Lean"
-            cta="Reserve my spot — $99"
-            success="Hollie will send checkout. Join now and you will get start-now workouts while you wait for September 14."
+            kind="lift-lab"
+            interest="Lift Lab"
+            cta="Reserve my spot — $129"
+            success="We will send checkout. Join now and you will get start-now workouts while you wait for the next session."
           />
         </div>
         <div className="mt-16">

@@ -13,15 +13,14 @@ export default function PrivacyPage() {
       <h1 className="mt-4 font-serif text-5xl">Privacy</h1>
       <div className="mt-10 max-w-2xl space-y-5 text-sm leading-relaxed text-muted">
         <p>
-          {site.name} collects the name, email, phone, and message you submit
-          through this site so we can reply, send program details, and deliver
-          free workouts you request.
+          {site.legalName} collects the name, email, phone, and message you
+          submit through this site so we can reply, send program details, and
+          deliver free workouts you request.
         </p>
         <p>
           We do not sell your information. Forms are stored for follow-up and,
-          when email delivery is configured, forwarded to {site.email}. Some
-          product links on this site are affiliate links; Hollie may earn a
-          commission if you buy through them.
+          when email delivery is configured, forwarded to {site.email}. This
+          site is a portfolio concept and does not process live payments.
         </p>
         <p>
           Workouts and nutrition coaching are educational and not medical advice.

@@ -1,12 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --ink: #0c0c0c;
-  --cream: #f4f0ea;
-  --paper: #fbf8f3;
-  --stone: #e4ddd3;
-  --muted: #6b645c;
-  --blush: #b85c68;
+  --ink: #121814;
+  --cream: #f2eee6;
+  --paper: #f7f4ee;
+  --stone: #ddd6c8;
+  --muted: #5c645c;
+  --moss: #4a6b52;
+  --copper: #c46b3a;
 }
 
 @theme inline {
@@ -15,9 +16,10 @@
   --color-paper: var(--paper);
   --color-stone: var(--stone);
   --color-muted: var(--muted);
-  --color-blush: var(--blush);
-  --font-sans: var(--font-outfit);
-  --font-serif: var(--font-cormorant);
+  --color-moss: var(--moss);
+  --color-copper: var(--copper);
+  --font-sans: var(--font-figtree);
+  --font-serif: var(--font-fraunces);
 }
 
 html {
@@ -27,11 +29,11 @@ html {
 body {
   background: var(--cream);
   color: var(--ink);
-  font-family: var(--font-outfit), system-ui, sans-serif;
+  font-family: var(--font-figtree), system-ui, sans-serif;
 }
 
 ::selection {
-  background: var(--ink);
+  background: var(--moss);
   color: var(--cream);
 }
 

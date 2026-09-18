@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import type { ReactNode } from "react";
 import { Button, Eyebrow, Section } from "@/components/ui";
-import { shop, site } from "@/lib/site";
+import { shop } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Recommended Gear",
   description:
-    "The dumbbells, bands, and protein Hollie actually uses for STRONG workouts at home.",
+    "The dumbbells, bands, and protein we recommend for Valora workouts at home.",
 };
 
 function ProductLink({
@@ -20,14 +21,9 @@ function ProductLink({
   children: ReactNode;
 }) {
   return (
-    <a
-      href={href}
-      target="_blank"
-      rel="sponsored noopener noreferrer"
-      className={className}
-    >
+    <Link href={href} className={className}>
       {children}
-    </a>
+    </Link>
   );
 }
 
@@ -36,8 +32,8 @@ export default function ShopPage() {
     <>
       <section className="relative min-h-[70vh] overflow-hidden bg-ink text-cream">
         <Image
-          src="/images/hero-dumbbells.jpg"
-          alt="Dumbbells in Hollie's home studio"
+          src="/images/dumbbells.jpg"
+          alt="Dumbbells in a home studio"
           fill
           priority
           className="object-cover object-[center_40%] opacity-55"
@@ -47,11 +43,11 @@ export default function ShopPage() {
           <div className="max-w-2xl">
             <Eyebrow>Recommended</Eyebrow>
             <h1 className="mt-4 font-serif text-5xl sm:text-6xl lg:text-7xl">
-              What I actually use.
+              What we actually use.
             </h1>
             <p className="mt-5 max-w-lg text-sm leading-relaxed text-cream/80 sm:text-base">
               You do not need a fancy gym. Dumbbells, bands, and enough protein
-              to recover. These are the pieces that show up in STRONG workouts.
+              to recover. These are the pieces that show up in Valora workouts.
             </p>
           </div>
         </div>
@@ -66,8 +62,8 @@ export default function ShopPage() {
             </h2>
           </div>
           <p className="lg:col-span-6 lg:col-start-7 text-muted leading-relaxed">
-            Every STRONG workout is built around dumbbells and resistance bands.
-            If you are just getting set up, buy these first. Everything else is
+            Every Valora workout is built around dumbbells and resistance bands.
+            If you are just getting set up, start here. Everything else is
             optional.
           </p>
         </div>
@@ -124,13 +120,8 @@ export default function ShopPage() {
               <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">
                 {item.blurb}
               </p>
-              {"code" in item && item.code ? (
-                <p className="mt-5 text-[11px] tracking-[0.18em] uppercase">
-                  Code {item.code}
-                </p>
-              ) : null}
               <p className="mt-5 text-[11px] tracking-[0.22em] uppercase">
-                View product →
+                Ask about this →
               </p>
             </ProductLink>
           ))}
@@ -141,8 +132,8 @@ export default function ShopPage() {
         <div className="mx-auto grid max-w-6xl lg:grid-cols-2">
           <div className="relative min-h-[420px]">
             <Image
-              src="/images/hollie-protein.jpg"
-              alt="Hollie with a protein shake"
+              src="/images/fuel.jpg"
+              alt="A simple protein smoothie"
               fill
               className="object-cover object-[center_20%]"
             />
@@ -153,8 +144,8 @@ export default function ShopPage() {
               Hit the number without overthinking it.
             </h2>
             <p className="mt-5 max-w-md text-sm leading-relaxed text-muted">
-              Food first. Powder when life is loud. Use code HOLLIEN where it is
-              listed.
+              Food first. Powder when life is loud. Ask us which option fits
+              how you already eat.
             </p>
           </div>
         </div>
@@ -175,13 +166,8 @@ export default function ShopPage() {
               <p className="mt-3 text-sm leading-relaxed text-muted">
                 {item.blurb}
               </p>
-              {"code" in item && item.code ? (
-                <p className="mt-5 text-[11px] tracking-[0.18em] uppercase">
-                  Code {item.code}
-                </p>
-              ) : null}
               <p className="mt-5 text-[11px] tracking-[0.22em] uppercase">
-                Shop {item.name} →
+                Ask about {item.name} →
               </p>
             </ProductLink>
           ))}
@@ -192,11 +178,10 @@ export default function ShopPage() {
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 lg:px-12">
           <Eyebrow>Apparel</Eyebrow>
           <h2 className="mt-4 max-w-xl font-serif text-4xl sm:text-5xl">
-            STRONG merch is getting its own home.
+            Studio merch is coming next.
           </h2>
           <p className="mt-5 max-w-lg text-sm leading-relaxed text-cream/75">
-            Hats, tanks, and milestone pieces are moving to a dedicated merch
-            shop so they can be printed and shipped without Hollie packing boxes.
+            Hats, tanks, and milestone pieces will live in a dedicated shop.
             Need something now? Send a note.
           </p>
           <div className="mt-8">
@@ -209,8 +194,7 @@ export default function ShopPage() {
 
       <Section className="py-12">
         <p className="max-w-2xl text-xs leading-relaxed text-muted">
-          {shop.disclosure} As an Amazon Associate, {site.name} earns from
-          qualifying purchases.
+          {shop.disclosure}
         </p>
       </Section>
     </>

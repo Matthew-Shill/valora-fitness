@@ -1,33 +1,33 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Outfit } from "next/font/google";
+import { Figtree, Fraunces } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { site } from "@/lib/site";
 import "./globals.css";
 
-const outfit = Outfit({
-  variable: "--font-outfit",
+const figtree = Figtree({
+  variable: "--font-figtree",
   subsets: ["latin"],
 });
 
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
   subsets: ["latin"],
   weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://hollienicholsonwellness.com"),
+  metadataBase: new URL(site.url),
   title: {
     default: `${site.name} | ${site.tagline}`,
     template: `%s | ${site.name}`,
   },
   description: site.description,
   openGraph: {
-    title: site.name,
+    title: site.legalName,
     description: site.description,
     type: "website",
-    images: [{ url: "/images/hero-squat.jpg" }],
+    images: [{ url: "/images/hero.jpg" }],
   },
 };
 
@@ -35,7 +35,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${outfit.variable} ${cormorant.variable} h-full antialiased`}
+      className={`${figtree.variable} ${fraunces.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-cream text-ink font-sans">
         <Header />

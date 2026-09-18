@@ -6,21 +6,21 @@ import { Button, Eyebrow, Section } from "@/components/ui";
 import { faqs, testimonials } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "14-Day LeanBody Project",
+  title: "21-Day Ignite",
 };
 
 const included = [
   {
     title: "4 follow-along workouts each week",
-    detail: "Upper body, lower body, full body, cardio + core. All 30 minutes or less.",
+    detail: "Upper body, lower body, full body, conditioning. All 30 minutes or less.",
   },
   {
-    title: "A trainer in every session",
-    detail: "No exercise lists. Press play and train with Hollie from start to finish.",
+    title: "A coach in every session",
+    detail: "No exercise lists. Press play and train from start to finish.",
   },
   {
-    title: "The LeanBody Eats Guide",
-    detail: "3 breakfasts, 4 lunches, 5 easy dinners — so eating well is simpler for 14 days.",
+    title: "The Ignite Eats Guide",
+    detail: "Simple breakfasts, lunches, and dinners — so eating well is easier for 21 days.",
   },
   {
     title: "Your plan, in one place",
@@ -28,13 +28,13 @@ const included = [
   },
 ];
 
-export default function LeanBodyPage() {
+export default function IgnitePage() {
   return (
     <>
       <section className="relative min-h-[80vh] overflow-hidden bg-ink text-cream">
         <Image
-          src="/images/hero-squat.jpg"
-          alt="Hollie coaching a squat"
+          src="/images/hero.jpg"
+          alt="Coaching a squat during the 21-Day Ignite program"
           fill
           priority
           className="object-cover object-[75%_center] opacity-70"
@@ -42,18 +42,18 @@ export default function LeanBodyPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/80 to-transparent" />
         <div className="relative mx-auto flex min-h-[80vh] max-w-6xl items-center px-5 py-20 sm:px-8 lg:px-12">
           <div className="max-w-xl">
-            <Eyebrow>Starts August 31</Eyebrow>
+            <Eyebrow>Starts any Monday</Eyebrow>
             <h1 className="mt-4 font-serif text-5xl sm:text-6xl lg:text-7xl">
-              14-Day LeanBody Project
+              21-Day Ignite
             </h1>
             <p className="mt-5 text-sm leading-relaxed text-cream/75 sm:text-base">
               You don&apos;t need another extreme reset. You need to get back to
               the things that actually change your body — consistently.
             </p>
-            <p className="mt-4 font-serif text-3xl">$19</p>
+            <p className="mt-4 font-serif text-3xl">$29</p>
             <div className="mt-8">
               <Button href="#join" variant="light">
-                I&apos;m in — 14 days for $19
+                I&apos;m in — 21 days for $29
               </Button>
             </div>
           </div>
@@ -75,7 +75,7 @@ export default function LeanBodyPage() {
         <div className="mx-auto grid max-w-6xl lg:grid-cols-2">
           <div className="relative min-h-[420px]">
             <Image
-              src="/images/hollie-squat.jpg"
+              src="/images/squat.jpg"
               alt="Follow-along strength workout"
               fill
               className="object-cover object-[center_22%]"
@@ -85,7 +85,7 @@ export default function LeanBodyPage() {
             <Eyebrow>This is for you if</Eyebrow>
             <ul className="mt-6 space-y-3 text-sm leading-relaxed">
               {[
-                "Summer threw off your routine",
+                "Your routine slipped and you want it back",
                 "You want to lose the weight that crept on",
                 "You've saved a million workouts and still aren't doing them",
                 "You want to feel leaner, stronger, and better in your clothes",
@@ -97,14 +97,14 @@ export default function LeanBodyPage() {
               ))}
             </ul>
             <p className="mt-8 font-serif text-2xl">
-              Give me 14 days. I&apos;ll give you the plan.
+              Give me 21 days. I&apos;ll give you the plan.
             </p>
           </div>
         </div>
       </section>
 
       <Section className="py-20">
-        <Eyebrow>What women are saying</Eyebrow>
+        <Eyebrow>What people are saying</Eyebrow>
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {testimonials.slice(4, 6).concat(testimonials.slice(1, 2)).map((t) => (
             <blockquote key={t.quote} className="border border-ink/10 bg-paper p-7">
@@ -121,17 +121,17 @@ export default function LeanBodyPage() {
         <div className="grid gap-12 border border-ink bg-paper p-8 sm:p-12 lg:grid-cols-2">
           <div>
             <Eyebrow>Reserve your spot</Eyebrow>
-            <h2 className="mt-4 font-serif text-4xl">Join LeanBody for $19.</h2>
+            <h2 className="mt-4 font-serif text-4xl">Join Ignite for $29.</h2>
             <p className="mt-4 text-sm leading-relaxed text-muted">
-              Drop your name and email. Hollie will send checkout and app access
-              so you are ready for August 31. Dumbbells only.
+              Drop your name and email. We will send checkout and app access so
+              you are ready for the next Monday. Dumbbells only.
             </p>
           </div>
           <LeadForm
-            kind="lean-body"
-            interest="14-Day LeanBody Project"
-            cta="Join the project — $19"
-            success="Hollie will send checkout and app access so you are ready for August 31."
+            kind="ignite"
+            interest="21-Day Ignite"
+            cta="Join the project — $29"
+            success="We will send checkout and app access so you are ready for the next Monday."
           />
         </div>
         <div className="mt-16">
