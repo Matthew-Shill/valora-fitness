@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { Logo } from "@/components/Logo";
 import { nav, site } from "@/lib/site";
 
 export function Footer() {
@@ -7,13 +7,7 @@ export function Footer() {
     <footer className="mt-auto bg-ink text-cream">
       <div className="mx-auto grid max-w-6xl gap-12 px-5 py-16 sm:px-8 lg:grid-cols-12 lg:px-12">
         <div className="lg:col-span-5">
-          <Image
-            src="/brand/logo.png"
-            alt={site.name}
-            width={420}
-            height={80}
-            className="h-12 w-auto"
-          />
+          <Logo variant="lockup" />
           <p className="mt-6 max-w-sm text-sm leading-relaxed text-cream/70">
             Strength, nutrition, and coaching for people who want a body they
             actually want to live in.

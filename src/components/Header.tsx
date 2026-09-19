@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { Logo } from "@/components/Logo";
 import { nav, site } from "@/lib/site";
 
 export function Header() {
@@ -13,15 +13,13 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 bg-ink text-cream">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-5 py-3 sm:px-8 lg:px-12">
-        <Link href="/" className="shrink-0" onClick={() => setOpen(false)}>
-          <Image
-            src="/brand/logo.png"
-            alt={`${site.name} — ${site.tagline}`}
-            width={420}
-            height={80}
-            className="h-10 w-auto sm:h-11"
-            priority
-          />
+        <Link
+          href="/"
+          className="shrink-0 text-cream"
+          onClick={() => setOpen(false)}
+          aria-label={`${site.name} — ${site.tagline}`}
+        >
+          <Logo />
         </Link>
 
         <nav className="hidden items-center gap-6 lg:flex">
