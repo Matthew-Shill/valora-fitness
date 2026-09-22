@@ -20,9 +20,9 @@ export default function HomePage() {
           alt="A Valora coach cueing a goblet squat in a home studio"
           fill
           priority
-          className="object-cover object-[70%_center] opacity-80"
+          className="object-cover object-[50%_38%] opacity-80 sm:object-[70%_center]"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/75 to-ink/10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/65 to-ink/20 sm:bg-gradient-to-r sm:from-ink sm:via-ink/75 sm:to-ink/10" />
         <div className="relative mx-auto flex min-h-[88vh] max-w-6xl flex-col justify-end px-5 py-16 sm:px-8 lg:justify-center lg:px-12">
           <div className="max-w-xl">
             <Eyebrow>Online strength for busy lives</Eyebrow>
