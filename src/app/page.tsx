@@ -41,7 +41,7 @@ export default function HomePage() {
         <span className="hidden sm:inline">Join now →</span>
       </Link>
 
-      <section className="bg-ink text-cream lg:hidden">
+      <section className="hero-mobile bg-ink text-cream">
         <Image
           src="/images/hero-mobile.jpg"
           alt="A Valora coach cueing a goblet squat in a home studio"
@@ -55,7 +55,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="relative hidden min-h-[88vh] overflow-hidden bg-ink text-cream lg:block">
+      <section className="hero-desktop relative min-h-[88vh] overflow-hidden bg-ink text-cream">
         <Image
           src="/images/hero.jpg"
           alt="A Valora coach cueing a goblet squat in a home studio"
