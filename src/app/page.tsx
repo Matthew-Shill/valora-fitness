@@ -14,16 +14,18 @@ export default function HomePage() {
         <span className="hidden sm:inline">Join now →</span>
       </Link>
 
-      <section className="relative min-h-[88vh] overflow-hidden bg-ink text-cream">
-        <Image
-          src="/images/hero.jpg"
-          alt="A Valora coach cueing a goblet squat in a home studio"
-          fill
-          priority
-          className="object-cover object-[50%_38%] opacity-80 sm:object-[70%_center]"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/65 to-ink/20 sm:bg-gradient-to-r sm:from-ink sm:via-ink/75 sm:to-ink/10" />
-        <div className="relative mx-auto flex min-h-[88vh] max-w-6xl flex-col justify-end px-5 py-16 sm:px-8 lg:justify-center lg:px-12">
+      <section className="relative overflow-hidden bg-ink text-cream lg:min-h-[88vh]">
+        <div className="relative aspect-[4/5] lg:absolute lg:inset-0 lg:aspect-auto">
+          <Image
+            src="/images/hero.jpg"
+            alt="A Valora coach cueing a goblet squat in a home studio"
+            fill
+            priority
+            className="object-cover object-[52%_center] opacity-95 lg:object-[70%_center] lg:opacity-80"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/15 to-ink/10 lg:bg-gradient-to-r lg:from-ink lg:via-ink/75 lg:to-ink/10" />
+        </div>
+        <div className="relative mx-auto flex max-w-6xl flex-col px-5 pb-14 pt-8 sm:px-8 lg:min-h-[88vh] lg:justify-center lg:px-12 lg:py-16">
           <div className="max-w-xl">
             <Eyebrow>Online strength for busy lives</Eyebrow>
             <h1 className="mt-5 font-serif text-5xl leading-[0.95] sm:text-6xl lg:text-7xl">
