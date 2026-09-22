@@ -17,15 +17,28 @@ export default function HomePage() {
       </Link>
 
       <section className="relative min-h-[88vh] overflow-hidden bg-ink text-cream">
-        <Image
-          src="/images/hero-mobile.jpg"
-          alt="A Valora coach cueing a goblet squat in a home studio"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover opacity-80"
-          style={{ objectPosition: "center 36%" }}
-        />
+        <div className="hero-photo-desktop absolute inset-0">
+          <Image
+            src="/images/hero.jpg"
+            alt="A Valora coach cueing a goblet squat in a home studio"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover opacity-80"
+            style={{ objectPosition: "70% center" }}
+          />
+        </div>
+        <div className="hero-photo-mobile absolute inset-0">
+          <Image
+            src="/images/hero-mobile.jpg"
+            alt="A Valora coach cueing a goblet squat in a home studio"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover opacity-80"
+            style={{ objectPosition: "center 36%" }}
+          />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/75 to-ink/10" />
         <div className="relative mx-auto flex min-h-[88vh] max-w-6xl flex-col justify-end px-5 py-16 sm:px-8 lg:justify-center lg:px-12">
           <div className="max-w-xl">

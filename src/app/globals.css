@@ -37,6 +37,24 @@ body {
   color: var(--cream);
 }
 
+.hero-photo-desktop {
+  display: none;
+}
+
+.hero-photo-mobile {
+  display: block;
+}
+
+@media (min-width: 1100px) and (hover: hover) and (pointer: fine) {
+  .hero-photo-mobile {
+    display: none;
+  }
+
+  .hero-photo-desktop {
+    display: block;
+  }
+}
+
 .framed {
   position: relative;
   border: 1px solid currentColor;
