@@ -42,23 +42,42 @@ body {
   border: 1px solid currentColor;
 }
 
-/* Phones, including iOS “Request Desktop Website” (~1024px), always get
-   the portrait squat. Overlay hero is for real pointer desktops only. */
-.hero-mobile {
+/* Do not use Tailwind sm/lg for this — iPhone without a viewport
+   (or with Request Desktop Website) is ~980–1024px and would get the
+   desktop crop. Keep the woman centered below 1100px. */
+.hero-photo-mobile {
   display: block;
 }
 
-.hero-desktop {
+.hero-photo-desktop {
   display: none;
 }
 
-@media (min-width: 1100px) and (hover: hover) and (pointer: fine) {
-  .hero-mobile {
+.hero-scrim {
+  background: linear-gradient(
+    to top,
+    rgba(18, 24, 20, 0.92) 0%,
+    rgba(18, 24, 20, 0.45) 42%,
+    rgba(18, 24, 20, 0.18) 100%
+  );
+}
+
+@media (min-width: 1100px) {
+  .hero-photo-mobile {
     display: none;
   }
 
-  .hero-desktop {
+  .hero-photo-desktop {
     display: block;
+  }
+
+  .hero-scrim {
+    background: linear-gradient(
+      to right,
+      #121814,
+      rgba(18, 24, 20, 0.75),
+      rgba(18, 24, 20, 0.1)
+    );
   }
 }
 
