@@ -3,6 +3,8 @@ import Link from "next/link";
 import { Button, Eyebrow, FramedMark, Section } from "@/components/ui";
 import { programs, site, testimonials } from "@/lib/site";
 
+export const dynamic = "force-dynamic";
+
 export default function HomePage() {
   return (
     <>
@@ -15,25 +17,16 @@ export default function HomePage() {
       </Link>
 
       <section className="relative min-h-[88vh] overflow-hidden bg-ink text-cream">
-        <div className="hero-photo-mobile absolute inset-0">
-          <Image
-            src="/images/hero-mobile.jpg"
-            alt="A Valora coach cueing a goblet squat in a home studio"
-            fill
-            priority
-            className="object-cover object-[center_38%] opacity-80"
-          />
-        </div>
-        <div className="hero-photo-desktop absolute inset-0">
-          <Image
-            src="/images/hero.jpg"
-            alt="A Valora coach cueing a goblet squat in a home studio"
-            fill
-            priority
-            className="object-cover object-[70%_center] opacity-80"
-          />
-        </div>
-        <div className="hero-scrim absolute inset-0" />
+        <Image
+          src="/images/hero-mobile.jpg"
+          alt="A Valora coach cueing a goblet squat in a home studio"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover opacity-80"
+          style={{ objectPosition: "center 36%" }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/75 to-ink/10" />
         <div className="relative mx-auto flex min-h-[88vh] max-w-6xl flex-col justify-end px-5 py-16 sm:px-8 lg:justify-center lg:px-12">
           <div className="max-w-xl">
             <Eyebrow>Online strength for busy lives</Eyebrow>

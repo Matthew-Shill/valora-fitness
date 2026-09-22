@@ -42,45 +42,6 @@ body {
   border: 1px solid currentColor;
 }
 
-/* Do not use Tailwind sm/lg for this — iPhone without a viewport
-   (or with Request Desktop Website) is ~980–1024px and would get the
-   desktop crop. Keep the woman centered below 1100px. */
-.hero-photo-mobile {
-  display: block;
-}
-
-.hero-photo-desktop {
-  display: none;
-}
-
-.hero-scrim {
-  background: linear-gradient(
-    to top,
-    rgba(18, 24, 20, 0.92) 0%,
-    rgba(18, 24, 20, 0.45) 42%,
-    rgba(18, 24, 20, 0.18) 100%
-  );
-}
-
-@media (min-width: 1100px) {
-  .hero-photo-mobile {
-    display: none;
-  }
-
-  .hero-photo-desktop {
-    display: block;
-  }
-
-  .hero-scrim {
-    background: linear-gradient(
-      to right,
-      #121814,
-      rgba(18, 24, 20, 0.75),
-      rgba(18, 24, 20, 0.1)
-    );
-  }
-}
-
 .framed-caption {
   position: absolute;
   left: 50%;
