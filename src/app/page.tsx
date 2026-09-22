@@ -3,6 +3,33 @@ import Link from "next/link";
 import { Button, Eyebrow, FramedMark, Section } from "@/components/ui";
 import { programs, site, testimonials } from "@/lib/site";
 
+function HeroCopy() {
+  return (
+    <div className="max-w-xl">
+      <Eyebrow>Online strength for busy lives</Eyebrow>
+      <h1 className="mt-5 font-serif text-5xl leading-[0.95] sm:text-6xl lg:text-7xl">
+        Lift heavy.
+        <br />
+        Eat simply.
+        <br />
+        Live stronger.
+      </h1>
+      <p className="mt-6 max-w-md text-sm leading-relaxed text-cream/75 sm:text-base">
+        {site.tagline} Follow-along workouts, simple nutrition, and a coach who
+        gets what your week actually looks like.
+      </p>
+      <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+        <Button href="/programs/ignite" variant="light">
+          Start the 21-day reset
+        </Button>
+        <Button href="/start" variant="ghost">
+          Get free workouts
+        </Button>
+      </div>
+    </div>
+  );
+}
+
 export default function HomePage() {
   return (
     <>
@@ -14,40 +41,31 @@ export default function HomePage() {
         <span className="hidden sm:inline">Join now →</span>
       </Link>
 
-      <section className="relative overflow-hidden bg-ink text-cream lg:min-h-[88vh]">
-        <div className="relative aspect-[4/5] lg:absolute lg:inset-0 lg:aspect-auto">
-          <Image
-            src="/images/hero.jpg"
-            alt="A Valora coach cueing a goblet squat in a home studio"
-            fill
-            priority
-            className="object-cover object-[52%_center] opacity-95 lg:object-[70%_center] lg:opacity-80"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/15 to-ink/10 lg:bg-gradient-to-r lg:from-ink lg:via-ink/75 lg:to-ink/10" />
+      <section className="bg-ink text-cream lg:hidden">
+        <Image
+          src="/images/hero-mobile.jpg"
+          alt="A Valora coach cueing a goblet squat in a home studio"
+          width={540}
+          height={720}
+          priority
+          className="h-auto w-full"
+        />
+        <div className="px-5 pb-14 pt-8 sm:px-8">
+          <HeroCopy />
         </div>
-        <div className="relative mx-auto flex max-w-6xl flex-col px-5 pb-14 pt-8 sm:px-8 lg:min-h-[88vh] lg:justify-center lg:px-12 lg:py-16">
-          <div className="max-w-xl">
-            <Eyebrow>Online strength for busy lives</Eyebrow>
-            <h1 className="mt-5 font-serif text-5xl leading-[0.95] sm:text-6xl lg:text-7xl">
-              Lift heavy.
-              <br />
-              Eat simply.
-              <br />
-              Live stronger.
-            </h1>
-            <p className="mt-6 max-w-md text-sm leading-relaxed text-cream/75 sm:text-base">
-              {site.tagline} Follow-along workouts, simple nutrition, and a
-              coach who gets what your week actually looks like.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Button href="/programs/ignite" variant="light">
-                Start the 21-day reset
-              </Button>
-              <Button href="/start" variant="ghost">
-                Get free workouts
-              </Button>
-            </div>
-          </div>
+      </section>
+
+      <section className="relative hidden min-h-[88vh] overflow-hidden bg-ink text-cream lg:block">
+        <Image
+          src="/images/hero.jpg"
+          alt="A Valora coach cueing a goblet squat in a home studio"
+          fill
+          priority
+          className="object-cover object-[70%_center] opacity-80"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/75 to-ink/10" />
+        <div className="relative mx-auto flex min-h-[88vh] max-w-6xl items-center px-12 py-16">
+          <HeroCopy />
         </div>
       </section>
 

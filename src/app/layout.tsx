@@ -16,6 +16,11 @@ const fraunces = Fraunces({
   weight: ["400", "500", "600"],
 });
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
